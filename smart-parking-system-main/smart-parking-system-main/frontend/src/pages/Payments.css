@@ -1,0 +1,65 @@
+
+.payments-summary {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.pay-stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 220px;
+  
+  position: relative;
+  overflow: hidden;
+}
+
+.pay-stat::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; width: 100px; height: 100px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(30%, -30%);
+}
+
+.pay-stat-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pay-stat-value {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+.pymt-find{
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+@media (max-width: 768px) {
+  .pay-stats {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .data-table-wrap {
+    overflow-x: auto;
+  }
+}
